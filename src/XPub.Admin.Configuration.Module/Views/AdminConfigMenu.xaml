@@ -1,0 +1,56 @@
+﻿<dxa:AccordionItem x:Class="XPub.Admin.Configuration.Module.Views.AdminConfigMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion"
+       xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+       xmlns:controls="clr-namespace:XPub.Infrastructure.Controls;assembly=XPub.Infrastructure"
+      xmlns:infPrism="clr-namespace:XPub.Infrastructure.Prism;assembly=XPub.Infrastructure"
+    
+        xmlns:mvvm="http://prismlibrary.com/"
+             mvvm:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:local="clr-namespace:XPub.Admin.Configuration.Module.Views" 
+        xmlns:viewmodels="clr-namespace:XPub.Admin.Configuration.Module.ViewModels" 
+         xmlns:commands="clr-namespace:XPub.Infrastructure.Commands;assembly=XPub.Infrastructure" 
+        DisplayMemberPath="{Binding DisplayMemberPath}" 
+          mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="800"   
+        ItemsSource="{Binding Items}"
+         HighlightOnHover="True"
+         Cursor="Hand"
+    infPrism:AccordionItemSelected.Command="{x:Static commands:CompositeCommands.NavigateCommand}"
+        infPrism:AccordionItemSelected.CommandParameter="Binding NavigateCommand}"
+              Glyph="{controls:ImageExtension CreateJob}"
+                Header  = "{Binding Header}"
+                   >
+    <dxa:AccordionItem.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/XPub.Infrastructure;component/Resources/SharedResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </dxa:AccordionItem.Resources>
+
+
+    <!--Place in datatemplate resource does not work-->
+    <!--Need to data bind image-->
+    <!--pack app not working in  imageextenion control-->
+
+    <!--<dxa:AccordionItem.Header>
+        <DockPanel>
+        <dx:DXImage HorizontalAlignment="Left" VerticalAlignment="Top"  Width="16" Height="16" DockPanel.Dock="Left" 
+                                    Source="{controls:ImageExtension CreateJob}"
+                    Margin="0,0,10,0"
+                                     />
+        <TextBlock Text="{Binding Header}" />
+</DockPanel>
+    </dxa:AccordionItem.Header>-->
+    <!--<dxa:AccordionItem.HeaderTemplate>
+        <DataTemplate>
+           
+                <TextBlock Text="{Binding}" />
+            
+        </DataTemplate>
+    </dxa:AccordionItem.HeaderTemplate>-->
+</dxa:AccordionItem>
