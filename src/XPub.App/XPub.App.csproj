@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+
+	  <AssemblyName>XPub.App</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\License\XPubLicense.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="DevExpress.WindowsDesktop.Images" Version="20.2.7" />
+		<PackageReference Include="devexpress.windowsdesktop.wpf.accordion" Version="20.2.7" />
+		<PackageReference Include="DevExpress.WindowsDesktop.Wpf.Themes.All" Version="20.2.7" />
+		
+		<PackageReference Include="Prism.Unity" Version="8.0.0.1909" />
+		<PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\XPub.Admin.Configuration.Module\XPub.Admin.Configuration.Module.csproj" />
+		<ProjectReference Include="..\XPub.Admin.HumanResources.Module\XPub.Admin.HumanResources.Module.csproj" />
+		<ProjectReference Include="..\XPub.Employee.AssignedWork.Module\XPub.Employee.AssignedWork.Module.csproj" />
+		<ProjectReference Include="..\XPub.Infrastructure\XPub.Infrastructure.csproj" />
+		<ProjectReference Include="..\XPub.Interfaces\XPub.Interfaces.csproj" />
+		<ProjectReference Include="..\XPub.Services.Module\XPub.Services.Module.csproj" />
+		<ProjectReference Include="..\XPub.Supervisor.Configuration.Module\XPub.Supervisor.Configuration.Module.csproj" />
+		<ProjectReference Include="..\XPub.Supervisor.JobManagement.Module\XPub.Supervisor.JobManagement.Module.csproj" />
+	</ItemGroup>
+</Project>
