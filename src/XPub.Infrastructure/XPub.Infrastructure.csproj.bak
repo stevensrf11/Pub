@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+	  <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>XPubSignaturePubKey.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="devexpress.windowsdesktop.wpf.layoutcontrol" Version="20.2.6" />
+	  <PackageReference Include="devexpress.windowsdesktop.wpf.accordion" Version="20.2.6" />
+	  <PackageReference Include="devexpress.windowsdesktop.wpf.grid.core" Version="20.2.6" />
+	  <PackageReference Include="devexpress.windowsdesktop.wpf.layoutcontrol" Version="20.2.6" />
+	  <PackageReference Include="devexpress.windowsdesktop.wpf.reporting" Version="20.2.6-ctp" />
+    <PackageReference Include="Prism.Unity" Version="8.0.0.1909" />
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XPub.Models\XPub.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="StyleResource.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DevExpress.Xpf.Accordion.v20.2">
+      <HintPath>C:\Program Files (x86)\DevExpress 20.2\.NET Core Desktop Libraries\Offline Packages\devexpress.windowsdesktop.wpf.accordion\20.2.6\lib\netcoreapp3.0\DevExpress.Xpf.Accordion.v20.2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
