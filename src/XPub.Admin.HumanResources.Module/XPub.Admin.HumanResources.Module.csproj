@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+	  <AssemblyName>XPub.Admin.HumanResources.Module</AssemblyName>
+	  <SignAssembly>true</SignAssembly>
+	  <AssemblyOriginatorKeyFile>..\..\License\XPubLicense.snk</AssemblyOriginatorKeyFile>
+	  <DelaySign>false</DelaySign>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="devexpress.windowsdesktop.wpf.accordion" Version="20.2.7" />
+		<PackageReference Include="devexpress.windowsdesktop.wpf.grid.core" Version="20.2.7" />
+		<PackageReference Include="devexpress.windowsdesktop.wpf.layoutcontrol" Version="20.2.7" />
+		<PackageReference Include="devexpress.windowsdesktop.wpf.reporting" Version="20.2.7-ctp" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />		
+		<PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\XPub.Infrastructure\XPub.Infrastructure.csproj" />
+	  <ProjectReference Include="..\XPub.Interfaces\XPub.Interfaces.csproj" />
+	  <ProjectReference Include="..\XPub.Models\XPub.Models.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\AdminHRMenu.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Update="Views\AdminHRMenu.xaml">
+	    <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+	    <SubType>Designer</SubType>
+	  </Page>
+	</ItemGroup>
+</Project>
