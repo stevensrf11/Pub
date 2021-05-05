@@ -1,0 +1,27 @@
+Command="{x:Static commands:ApplicationCommands.NavigateCommand}">
+
+
+sn -p XPubSignatureKey.snk XPubSignaturePubKey.snk sha256 
+sn -p XPubIdentityKey.snk XPubIdentityPubKey.snk  
+
+sn -a XPubIdentityPubKey.snk XPubIdentityKey.snk XPubSignaturePubKey.snk
+
+G:\code\XPub\License>sn -a XPubIdentityPubKey.snk XPubIdentityKey.snk XPubSignaturePubKey.snk
+
+Microsoft (R) .NET Framework Strong Name Utility  Version 4.0.30319.18020
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Information for key migration attribute.
+(System.Reflection.AssemblySignatureKeyAttribute):
+publicKey=
+002400000c800000940000000602000000240000525341310004000001000100ad965daec7478f
+01ba390742a67638a77febc699f318fd83c2861777dcfc35b808b94904bc577583663125d27862
+ad8d1193df2b2e6aa8b64424e5b4da162c68addbbce4760e8acac46f86f3aa924c628133e1b8ca
+db3ac5319e706be0ea6af9e4c96fd16f25096dc66f37cfd485c41ecb54a63bfbf077794387a85a
+443bdde1
+
+counterSignature=
+4c937e750753be87e4ff865eefcddbbcf1c188070452e827d4a81cc6f8b7cb6cf3615640dd23a9
+be7874174332073b61ac146780b6a708516bc49766c0f0ec27332c5aef07e61b042081276965f6
+54e63225b61afd2ce8963f369360468f52482fb166b203a41f7f36c657155c5fd9f9a11f068d9a
+1a46a535666130a126b44f
