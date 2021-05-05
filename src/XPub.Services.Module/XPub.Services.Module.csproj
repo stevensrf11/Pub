@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>XPub.Services.Module</AssemblyName>
+	  <SignAssembly>true</SignAssembly>
+	  <AssemblyOriginatorKeyFile>..\..\License\XPubLicense.snk</AssemblyOriginatorKeyFile>
+	  <DelaySign>false</DelaySign>	  
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XPub.Infrastructure\XPub.Infrastructure.csproj" />
+    <ProjectReference Include="..\XPub.Interfaces\XPub.Interfaces.csproj" />
+    <ProjectReference Include="..\XPub.Models\XPub.Models.csproj" />
+    <ProjectReference Include="..\XPub.Services\XPub.Services.csproj" />
+  </ItemGroup>
+</Project>
